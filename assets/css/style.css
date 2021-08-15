@@ -141,6 +141,13 @@ section p{
   font-size: 85px;
   letter-spacing: 5px;
 }
+.banner-area .socials{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
 .banner-area h3{
   margin-bottom: 50px;
   font-size: 35px;
@@ -154,22 +161,20 @@ section p{
   box-shadow: inset 0 0 0 0 #19b574;
   transition: border-bottom 1s;
   outline: none;
-  width: 150px;
   position: relative;
   background-color: white;
+  flex: 10;
 }
 .banner-btn a{
   color: white;
   mix-blend-mode: difference;
 }
-.banner-area .socials{
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-@media(max-width:700px){
+@media(max-width:600px){
   .banner-area .socials{
     flex-direction: column;
+    justify-content: space-evenly;
   }
+
 }
 
 /* HOVER ANIMATIONS FOR BANNER BUTTONS */
