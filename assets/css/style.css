@@ -8,6 +8,7 @@
 }
 body{
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 h1{
   font-family: 'Inconsolata', monospace;
@@ -212,7 +213,67 @@ section p{
   }
 
 }
+.bottom-bar{
+  background-color: #454545;
+  min-height: 30vh;
+  min-width: 100vw;
+  position: absolute;
+  left: 0;
 
+  /* FLEXBOX */
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bottom-bar-content{
+  width: 100%;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+
+  webkit-flex-direction: row;
+  flex-direction: row;
+}
+.bottom-bar h1{
+  color: white;
+  font-size: 3rem;
+  margin-left: 10%;
+}
+.bottom-socials{
+  position: absolute;
+  right: 0;
+  margin-right: 10%;
+}
+.bottom-socials a img{
+  width: 50px;
+  height: 50px;
+}
+.bottom-socials a{
+  margin: 25px;
+}
+@media(max-width:600px){
+  .bottom-bar-content{
+    webkit-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .bottom-socials {
+    position: relative;
+    margin: 0;
+  }
+  .bottom-bar h1{
+    margin: 0;
+  }
+}
 /* HOVER ANIMATIONS FOR BANNER BUTTONS */
 .banner-btn::before{
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.04, 1.3);
