@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -7,6 +8,9 @@
 }
 body{
   font-family: 'Inter', sans-serif;
+}
+h1{
+  font-family: 'Inconsolata', monospace;
 }
 ul,nav{
   list-style: none;
@@ -78,7 +82,7 @@ header nav li:last-child{
 }
 
 /* BANNER */
-section{
+section.banner-area{
   /* FLEXBOX */
   display: -webkit-flex;
   display: -moz-flex;
@@ -90,13 +94,45 @@ section{
   align-items: center;
   padding: 110px 100px;
 }
+section.main-content{
+  /* FLEXBOX */
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px;
+}
+.main-content h1{
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-size: 55px;
+  letter-spacing: 5px;
+}
+.main-content .justified-content p{
+  text-align: justify;
+  text-align-last: center;
+}
+.main-content .justified-content{
+  min-width: 50vw;
+  /* FLEXBOX */
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 @media(max-width:1000px){
-  section{
+  section.banner-area{
     padding: 100px 50px;
   }
 }
 @media(max-width:600px){
-  section{
+  section.banner-area{
     padding: 125px 30px;
   }
 }
@@ -215,4 +251,30 @@ header nav li:hover:before, nav li:hover:after{
   opacity: 1;
   height: 2px;
   width: 100%;
+}
+
+/* TYPEWRITER EFFECT ANIMATIONS */
+.anim-typewriter{
+  animation: typewriter 2s steps(13) 1s 1 normal both,
+            blinkTextCursor 850ms steps(13) infinite normal;
+}
+.type-line{
+  position: relative;
+  top: 50%;
+  width: 8em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(39, 128, 179, 0.7);
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 7.6em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(39, 128, 179, 0.7);}
+  to{border-right-color: transparent;}
 }
