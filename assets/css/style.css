@@ -139,6 +139,9 @@ section.main-content{
   display: flex;
   position: relative;
 }
+.left-content p{
+  text-align: justify;
+}
 .left-content img{
   z-index: 0;
   position: relative;
