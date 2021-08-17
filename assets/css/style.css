@@ -145,6 +145,9 @@ section.main-content{
 .left-content p{
   text-align: justify;
 }
+.left-content b{
+  text-align: left;
+}
 .left-content img{
   z-index: 0;
   position: relative;
