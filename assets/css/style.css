@@ -123,7 +123,7 @@ section.main-content{
   text-align-last: center;
 }
 .main-content .justified-content{
-  max-width: 50vw;
+  min-width: 50vw;
   /* FLEXBOX */
   display: -webkit-flex;
   display: -moz-flex;
