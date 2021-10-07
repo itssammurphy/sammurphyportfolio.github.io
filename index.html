@@ -1,34 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
   <head>
+    <title>Sam Murphy</title>
 
-    <title>Sam's ePortfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- META -->
+    <!-- DISCORD -->
+    <meta property="og:title" content="Sam Murphy" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sammurphyportfolio.github.io" />
+    <meta property="og:description" content="Freelance Developer" />
+    <meta name="theme-color" content="#ff9f10">
 
+    <!-- VIEWPORT -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8" />
 
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/progress-animations.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/animations.css">
+
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- ICONIFY & UNICONS -->
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   </head>
   <body>
-    <header>
-        <h2><a href="#">Sam Murphy</a></h2>
-        <nav>
-          <li><a href="#">Home</a></li>
-          <li><a href="about-me.html">About Me</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </nav>
-    </header>
-    <section class="banner-area">
-      <div class="banner-img"></div>
-      <h1>Sam Murphy's Portfolio</h1>
-      <h3>Check out my Socials!</h3>
-      <div class="socials">
-        <span class="banner-btn"><a href="discord.html">DISCORD</a></span>
-        <span class="banner-btn"><a href="#">YOUTUBE</a></span>
-      </div>
-    </section>
-  </body>
+    <nav id="home">
+      <h1>My Portfolio</h1>
+      <ul class="nav-container">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="home-section">
+        <div class="heading">
+          <div class="name-heading">
+            <h2>Hello, my name is</h2>
+            <h1>Sam Murphy</h1>
+          </div>
+          <p>Hope you're doing well. I'm a young and aspiring software developer
+          from Melbourne, Australia, looking to share my work with the world.</p>
+        </div>
+        <div class="feature-img">
+          <img src="assets/img/profile-picture.png">
+        </div>
+      </section>
+      <section class="about-section" id="about">
+        <h1>About Me</h1>
+        <div class="about-columns">
+          <div class="left">
+            <h2>G'day!</h2>
+            <p>I'm Sam, a 15 year-old aspiring software developer from Melbourne, Australia.
+            This is my website! This is where I'll be showcasing my coding projects and help
+            further develop my skills with HTML, CSS and front-end JavaScript. This website will
+            be undergoing almost constant change as I attempt to tune every minute detail to my
+            liking, so watch this space! To keep up-to-date with my coding projects, join my
+            <a href="discord.html">discord server</a>, a place where like-minded developers can collaborate
+            and share ideas.<br><br>
+            I've been coding since 2014. I learnt Python when I was in Year 3 at school, and continued
+            to use Python to solve coding problems on a daily basis. I am currently learning Java, and
+            have previously used C++ and JavaScript. I have a strong interest in IoT and web development,
+            as well as algorithm design.<br><br>
+            <b>Beyond coding,</b> I play a <i>lot</i> of sport. In summer, I play cricket and throughout
+            the rest of the year, I always try to slot a round of golf in. I also play video games (probably
+            more than I'm willing to admit), and have recently been fixated on Splitgate and Rocket League.<br><br>
+            Back to the matter at hand though, I want to use this website as a place to share my development in coding
+            with people, and share any cool or useful projects that may eventuate from this journey. I also hope that
+            this website can help me network with people whom with I can collaborate with on future projects, and help
+            further expand my skills in a diverse range of programming fields.</p>
+          </div>
+          <div class="right">
+            <h2>Programming Languages I Use</h2>
+            <ul class="skills-bars">
+              <li>
+                <div class="progress-title">
+                  <h3>HTML5 &amp; CSS</h3>
+                  <span class="percent" id="html-percent"></span>
+                </div>
+                <div class="bar-container">
+                  <span class="progress-bar prog1" id="html-progress"></span>
+                </div>
+              </li>
+              <li>
+                <div class="progress-title">
+                  <h3>Python</h3>
+                  <span class="percent" id="python-percent"></span>
+                </div>
+                <div class="bar-container">
+                  <span class="progress-bar prog2" id="python-progress"></span>
+                </div>
+              </li>
+              <li>
+                <div class="progress-title">
+                  <h3>JavaScript</h3>
+                  <span class="percent" id="js-percent"></span>
+                </div>
+                <div class="bar-container">
+                  <span class="progress-bar prog3" id="js-progress"></span>
+                </div>
+              </li>
+              <li>
+                <div class="progress-title">
+                  <h3>SQL</h3>
+                  <span class="percent" id="sql-percent"></span>
+                </div>
+                <div class="bar-container">
+                  <span class="progress-bar prog4" id="sql-progress"></span>
+                </div>
+              </li>
+              <li>
+                <div class="progress-title">
+                  <h3>C++</h3>
+                  <span class="percent" id="cpp-percent"></span>
+                </div>
+                <div class="bar-container">
+                  <span class="progress-bar prog5" id="cpp-progress"></span>
+                </div>
+              </li>
+              <li>
+                <div class="progress-title">
+                  <h3>Git</h3>
+                  <span class="percent" id="git-percent"></span>
+                </div>
+                <div class="bar-container">
+                  <span class="progress-bar prog6" id="git-progress"></span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="services-section" id="services">
+        <h1>My Services</h1>
+        <p>I offer a variety of services so if you need something done in one of these fields,
+        don't be afraid to contact me and make an inquiry.</p>
+        <div class="services-grid">
+          <div class="tile">
+            <i class="uil uil-desktop"></i>
+            <div class="tile-content">
+              <h2>Frontend Design</h2>
+              <p>Designing beautiful, elegant websites to get your customers' attention.</p>
+            </div>
+          </div>
 
+          <div class="tile">
+            <i class="uil uil-mobile-android"></i>
+            <div class="tile-content">
+              <h2>Responsive Design</h2>
+              <p>Making your websites look beautiful on every device.</p>
+            </div>
+          </div>
+
+          <div class="tile">
+            <i class="uil uil-cog"></i>
+            <div class="tile-content">
+              <h2>Algorithm Design</h2>
+              <p>Developing effective solutions to client problems by purpose-building algorithms for a task.</p>
+            </div>
+          </div>
+
+          <div class="tile">
+            <i class="uil uil-database"></i>
+            <div class="tile-content">
+              <h2>Data Analysis</h2>
+              <p>Analysing statistics to achieve an outcome.</p>
+            </div>
+          </div>
+
+          <div class="tile">
+            <i class="uil uil-plug"></i>
+            <div class="tile-content">
+              <h2>API Integration</h2>
+              <p>Making use of up-to-date APIs to make your solution as efficient as possible.</p>
+            </div>
+          </div>
+
+          <div class="tile">
+            <i class="uil uil-phone"></i>
+            <div class="tile-content">
+              <h2>Effective Communication</h2>
+              <p>Here for you every step of the way.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <h1 class="large-heading">Contact Me</h1>
+        <div class="contact-content">
+          <div class="hiring">
+            <h2>Interested in Hiring Me?</h2>
+            <p>If you are looking to hire me for a long-term position, please find attached my CV and feel free to get in
+            touch with me if you think we'd be a good match.</p>
+            <a href="assets/cv.pdf">Read My CV</a>
+          </div>
+          <div class="collaborating">
+            <h2>Interested in Collaborating?</h2>
+            <p>If you are interested in collaborating on a software project, the easiest way to reach me
+            is via my <a href="discord.html">discord server</a>. This is also a great place to reach
+            me if you just want to have a chat or network with other developers.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="light-toggle">
+      <label>
+        <input class="toggle-check" type="checkbox" id="light-dark-toggle"></input>
+        <div class="toggle-slot">
+          <div class="sun-icon-wrapper">
+            <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+          </div>
+          <div class="toggle-btn"></div>
+          <div class="moon-icon-wrapper">
+            <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+          </div>
+        </div>
+      </label>
+    </div>
+
+    <script src="assets/js/skills.js"></script>
+    <script src="assets/js/light-dark-toggle.js"></script>
+
+    <script>
+    if (localStorage.getItem("light-dark") == 1) {
+      $('#light-dark-toggle').prop('checked', true);
+      darkMode();
+    } else {
+      $('#light-dark-toggle').prop('checked', false);
+      lightMode();
+    }
+
+
+    </script>
+  </body>
 </html>

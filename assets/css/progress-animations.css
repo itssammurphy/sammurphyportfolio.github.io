@@ -1,0 +1,49 @@
+
+@keyframes html-slide {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes python-slide {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 95%;
+  }
+}
+@keyframes js-slide {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%
+  }
+}
+@keyframes sql-slide {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes cpp-slide {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+@keyframes git-slide {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
