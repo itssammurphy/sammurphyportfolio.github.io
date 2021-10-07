@@ -1,4 +1,4 @@
-@media (max-width: 480px) {
+@media (max-width: 860px) {
   main {
   }
   nav {
@@ -214,5 +214,10 @@
   .toggle-check:checked ~ .toggle-slot .moon-icon-wrapper {
     opacity: 1;
     transform: translate(2.85rem, 0.625rem) rotate(0deg);
+  }
+}
+@media (min-width: 570px) and (max-width: 860px) {
+  .home-section .feature-img img {
+    max-width: 58%;
   }
 }
