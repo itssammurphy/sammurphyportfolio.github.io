@@ -59,6 +59,9 @@
   .about-section .about-columns {
     flex-direction: column;
   }
+  .about-section .about-columns .left {
+    align-items: center;
+  }
   .about-section .about-columns .left,
   .about-section .about-columns .right {
     flex: 1;

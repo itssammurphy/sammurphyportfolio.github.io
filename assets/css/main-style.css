@@ -170,7 +170,8 @@ section:not(.home-section) h1 {
   max-width: 50%;
   padding: 5%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .about-section .about-columns .left h2,
 .about-section .about-columns .right h2 {
