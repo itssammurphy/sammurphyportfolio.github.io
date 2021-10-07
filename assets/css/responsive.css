@@ -61,6 +61,7 @@
   }
   .about-section .about-columns .left {
     align-items: center;
+    margin-bottom: 4rem;
   }
   .about-section .about-columns .left,
   .about-section .about-columns .right {
