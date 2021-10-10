@@ -489,6 +489,17 @@ main section:nth-child(even) {
   transform: translate(6.5rem, 1.1rem) rotate(0deg);
 }
 
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: transform 1500ms ease, opacity 1500ms ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /* SCROLLBAR */
 *::-webkit-scrollbar {
   width: 12px;
