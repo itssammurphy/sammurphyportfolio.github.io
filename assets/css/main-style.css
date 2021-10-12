@@ -506,10 +506,10 @@ main section:nth-child(even) {
   width: 12px;
 }
 *::-webkit-scrollbar-track {
-  background: var(--scroll-bg);
+  background: rgba(0,0,0,0);
 }
 *::-webkit-scrollbar-thumb {
-  background: var(--scroll-thumb-bg);
+  background: #ff872b;
   border-radius: 15px;
 }
 *::-webkit-scrollbar-thumb:hover {
