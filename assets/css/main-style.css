@@ -67,11 +67,12 @@ nav ul li {
   list-style: none;
   flex: 0 1 10%;
   font-size: 1.2rem;
+  line-height: 1.2rem;
   transition: opacity 300ms, transform 300ms;
   cursor: pointer;
   transform-origin: 50% 50%;
   text-align: center;
-  padding: 0.3rem;
+  padding: 0.5rem 0.4rem;
 }
 nav ul li:not(:last-child):hover {
   opacity: 0.6;
