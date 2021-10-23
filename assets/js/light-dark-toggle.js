@@ -27,7 +27,7 @@ function lightMode() {
   document.documentElement.style.setProperty('--second-text-color', '#5d5d5d');
   document.documentElement.style.setProperty('--accent-color', '#ff784f');
   document.documentElement.style.setProperty('--selected-color', '#9e9e9e');
-  document.documentElement.style.setProperty('--section-even-color', '#dedede');
+  document.documentElement.style.setProperty('--section-even-color', '#f2f2f2');
   document.documentElement.style.setProperty('--tile-bg', '#d7d7d7');
   document.documentElement.style.setProperty('--tile-shadow', '#b9b9b9');
   document.documentElement.style.setProperty('--tile-icon-shadow', '#7d7d7d');
