@@ -331,7 +331,6 @@ section:not(.home-section) h1 {
   width: 6rem;
   line-height: 6rem;
   border-radius: 50%;
-  box-shadow: 0 0 25px 1px var(--tile-icon-shadow);
 }
 
 /* PORTFOLIO SECTION */
