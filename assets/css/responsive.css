@@ -17,9 +17,12 @@
     flex: 1 1 75%;
   }
 
+  section {
+    min-height: auto;
+  }
   .home-section {
     flex-direction: column-reverse;
-    max-height: 60vh !important;
+    height: 85vh !important;
   }
   .home-section .heading {
     flex: 1;
@@ -116,6 +119,17 @@
   }
   .services-section .services-grid .tile p {
     font-size: 1rem;
+  }
+
+  .portfolio-section .portfolio-grid .tile {
+    flex-basis: 100%;
+    max-width: 98%;
+  }
+  .portfolio-section .portfolio-grid .tile .tile-content h1 {
+    font-size: 1.8rem;
+  }
+  .portfolio-section .portfolio-grid .tile .tile-content p {
+    font-size: 0.8rem;
   }
 
   .contact-section .large-heading {

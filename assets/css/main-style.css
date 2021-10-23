@@ -325,32 +325,73 @@ section:not(.home-section) h1 {
 }
 
 /* PORTFOLIO SECTION */
-.portfolio-section ul {
+.portfolio-section .portfolio-grid {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   width: 100%;
-  min-height: 20%;
+  justify-content: space-around;
+  margin-top: 2rem;
 }
-.portfolio-section ul li {
-  list-style: none;
-}
-.portfolio-section ul .tile {
-  flex: 1;
-  flex-basis: 25%;
-  background-color: var(--selected-color);
-  max-width: 25%;
-  padding: 20px;
+.portfolio-section .portfolio-grid .tile {
+  flex: 0 1 50%;
+  max-width: 48%;
+  min-height: 45vh;
+  background-color: var(--background-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
+  margin-bottom: 3rem;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.portfolio-section .portfolio-grid .tile .bg-img {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: filter 400ms ease;
+}
+.portfolio-section .portfolio-grid .tile .tile-content {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 1rem;
+  font-weight: 600;
+  transition: opacity 400ms ease;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
-.portfolio-section ul .tile img {
-  max-width: 80%;
+.portfolio-section .portfolio-grid .tile .tile-content h1 {
+  font-size: 3rem;
+  color: #fff;
 }
-
+.portfolio-section .portfolio-grid .tile .tile-content p {
+  font-size: 2rem;
+  color: #fff;
+}
+.portfolio-section .portfolio-grid .tile .tile-content a {
+  font-size: 2rem;
+  color: #fff;
+}
+.portfolio-section .portfolio-grid .tile .tile-content .skills-used span {
+  font-weight: 900 !important;
+  text-decoration: underline;
+}
+.portfolio-section .portfolio-grid .tile:hover .tile-content {
+  opacity: 1;
+}
+.portfolio-section .portfolio-grid .tile:hover .bg-img {
+  filter: brightness(0.6) blur(2px);
+}
 /* CONTACT SECTION */
 .contact-section .large-heading {
   font-size: 4rem;
