@@ -321,4 +321,7 @@
     .skills-bars li .progress-title .percent {
       font-size: 2rem;
     }
+    .light-toggle {
+      right: 5%;
+    }
 }
