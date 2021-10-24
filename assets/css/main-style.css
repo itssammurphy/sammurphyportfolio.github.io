@@ -99,12 +99,12 @@ main {
   height: 100%;
 }
 section {
-  height: 100vh;
+  min-height: 100vh;
 }
 /* HOME SECTION */
 .home-section {
   width: 100vw;
-  height: 90vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
 }

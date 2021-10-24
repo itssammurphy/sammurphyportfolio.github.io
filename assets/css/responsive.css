@@ -22,16 +22,19 @@
   }
   .home-section {
     flex-direction: column-reverse;
-    height: 85vh !important;
+    min-height: 65vh !important;
   }
-  .home-section .heading {
+  .home-section .feature-heading {
     flex: 1;
     max-width: 100%;
     max-height: 40%;
     text-align: center;
     margin: 0;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+  }
+  .home-section .feature-heading .heading {
+    width: 90%;
   }
   .home-section .heading .name-heading {
     width: 100%;
@@ -49,7 +52,7 @@
     max-height: 50%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
   }
 
   section:not(.home-section) {
@@ -235,93 +238,4 @@
   .home-section .feature-img img {
     max-width: 58%;
   }
-}
-@media only screen
-  and (min-width: 1024px)
-  and (max-height: 1366px)
-  and (orientation: landscape)
-  and (-webkit-min-device-pixel-ratio: 1.5) {
-    .about-section {
-      min-height: 120vh;
-    }
-  }
-@media only screen
-  and (min-width: 1024px)
-  and (max-height: 1366px)
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 1.5) {
-    .home-section {
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-    }
-    .home-section .feature-heading {
-      max-width: 90%;
-      max-height: 40%;
-    }
-    .home-section .feature-heading .heading {
-      width: 100%;
-    }
-    .home-section .feature-heading .heading .name-heading {
-      align-items: center;
-      justify-content: center;
-    }
-    .home-section .feature-heading .heading p {
-      text-align: center;
-      font-size: 2rem;
-    }
-    .home-section h2 {
-      font-size: 2.5rem;
-    }
-    .home-section h1 {
-      font-size: 5rem;
-    }
-    .home-section .feature-img {
-      min-width: 100%;
-      height: 60%;
-      align-items: flex-start;
-    }
-
-    .about-section {
-      min-height: 150vh;
-    }
-    .about-section .about-columns {
-      flex-direction: column;
-    }
-    .about-section .about-columns .left {
-      align-items: center;
-      margin-bottom: 4rem;
-    }
-    .about-section .about-columns .left p {
-      font-size: 2rem;
-      line-height: 3rem;
-      width: 100%;
-      line-height: 2.1rem;
-    }
-    .about-section .about-columns .left h2,
-    .about-section .about-columns .right h2  {
-      text-align: center;
-      font-size: 4rem;
-    }
-    .about-section .about-columns .left,
-    .about-section .about-columns .right {
-      max-width: 100%;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-    }
-    .skills-bars {
-      max-width: 100%;
-    }
-    .skills-bars li {
-      width: 100%;
-    }
-    .skills-bars li .progress-title h3,
-    .skills-bars li .progress-title .percent {
-      font-size: 2rem;
-    }
-    .light-toggle {
-      right: 5%;
-    }
 }
