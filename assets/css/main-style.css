@@ -98,13 +98,13 @@ main {
   width: 100%;
   height: 100%;
 }
-section {
+section:not(.home-section) {
   min-height: 100vh;
 }
 /* HOME SECTION */
 .home-section {
   width: 100vw;
-  min-height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: row;
 }
