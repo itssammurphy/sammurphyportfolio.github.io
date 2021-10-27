@@ -20,11 +20,21 @@ export default class KanbanAPI {
     if (!col) {
       throw new Error("This column doesn't exist.");
     }
+    if (colID == 2 && document.querySelector('[data-id="2"]').children[1].children.length <= 5) {
+      col.items.push(item);
+      save(data);
 
-    col.items.push(item);
-    save(data);
+      document.querySelector('[data-id="2"]').children[0].textContent = 'In Progress (' + (document.querySelector('[data-id="2"]').children[1].children.length) + '/5)';
+      return item;
+    } else if (colID == 2 && document.querySelector('[data-id="2"]').children[1].children.length > 5) {
+      alert('Hold up! You already have the maximum number of tasks in progress at the moment. Focus on those first, or move some others to expedite this task.');
+    } else if (colID != 2) {
+      col.items.push(item);
+      save(data);
+      return item;
+    }
 
-    return item;
+
   }
 
   static updateItem(itemID, newProperties) {
@@ -67,13 +77,19 @@ export default class KanbanAPI {
 
   static delItem(itemID) {
     const data = read();
+    var deletedColID;
 
     for (const col of data) {
       const item = col.items.find(item => item.id == itemID);
 
       if (item) {
         col.items.splice(col.items.indexOf(item), 1);
+        deletedColID = col.id
       }
+    }
+
+    if (deletedColID == 2) {
+      document.querySelector('[data-id="2"]').children[0].textContent = 'In Progress (' + (document.querySelector('[data-id="2"]').children[1].children, document.querySelector('[data-id="2"]').children[1].children.length-2) + '/5)';
     }
 
     save(data);

@@ -29,8 +29,6 @@ export default class DropArea {
       const itemId = Number(e.dataTransfer.getData("text/plain"));
       const droppedElement = document.querySelector(`[data-id="${itemId}"]`);
 
-      // console.log(colElement.children[1].children);
-      console.log(colElement);
       if (colID == 2 && colElement.children[1].children.length-1 >= 5) {
         //TOO MANY IN PROGRESS ITEMS
         alert('Hold up! You already have the maximum number of tasks in progress at the moment. Focus on those first, or move some others to expedite this task.');
