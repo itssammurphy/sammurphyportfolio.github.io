@@ -1,0 +1,56 @@
+import KanbanAPI from "../api/KanbanAPI.js";
+export default class DropArea {
+  static createDropArea() {
+    const range = document.createRange();
+
+    range.selectNode(document.body);
+
+    const dropArea = range.createContextualFragment(`
+      <div class="kanban__drop-area"></div>
+    `).children[0];
+
+    dropArea.addEventListener("dragover", e => {
+      e.preventDefault();
+      dropArea.classList.add("kanban__drop-area--active");
+    });
+
+    dropArea.addEventListener("dragleave", () => {
+      dropArea.classList.remove("kanban__drop-area--active");
+    });
+
+    dropArea.addEventListener("drop", e => {
+      e.preventDefault();
+      dropArea.classList.remove("kanban__drop-area--active");
+
+      const colElement = dropArea.closest(".kanban__column");
+      const colID = Number(colElement.dataset.id);
+      const dropAreasInCol = Array.from(colElement.querySelectorAll(".kanban__drop-area"));
+      const droppedIndex = dropAreasInCol.indexOf(dropArea);
+      const itemId = Number(e.dataTransfer.getData("text/plain"));
+      const droppedElement = document.querySelector(`[data-id="${itemId}"]`);
+
+      console.log(droppedElement);
+
+      if (dropArea.parentElement.classList.contains("kanban__item")) {
+        console.log('contains');
+      } else {
+        console.log('does not contain');
+      }
+
+      const insertAfter = dropArea.parentElement.classList.contains("kanban__item") ? dropArea.parentElement : dropArea;
+
+      if (droppedElement.contains(dropArea)) {
+        return;
+      }
+
+      insertAfter.after(droppedElement);
+
+      KanbanAPI.updateItem(itemId, {
+        colID,
+        pos: droppedIndex
+      });
+    });
+
+    return dropArea;
+  }
+}
