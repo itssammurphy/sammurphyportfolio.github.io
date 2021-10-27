@@ -13,7 +13,6 @@ export default class Column {
     this.elements.addItem = this.elements.root.querySelector('.kanban__add-item');
 
     this.elements.root.dataset.id = id;
-    this.elements.title.textContent = name;
     this.elements.items.appendChild(topDropArea);
 
     this.elements.addItem.addEventListener("click", () => {
@@ -25,6 +24,14 @@ export default class Column {
     KanbanAPI.getItems(id).forEach(item => {
       this.renderItem(item);
     });
+
+    if (id == 2) {
+      //IF IT IS THE IN PROGRESS COLUMN
+      //LIMIT TASKS TO 4
+      this.elements.title.textContent = name + ' (' + (this.elements.items.children.length-1) + '/5)';
+    } else {
+      this.elements.title.textContent = name;
+    }
   }
 
   static createRoot() {

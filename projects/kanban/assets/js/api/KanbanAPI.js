@@ -46,7 +46,9 @@ export default class KanbanAPI {
     item.content = newProperties.content === undefined ? item.content : newProperties.content;
 
     //UPDATE COLUMN AND ITEM POSITION
-    if (newProperties.colID !== undefined && newProperties.pos !== undefined) {
+    if (newProperties.colID == 2 && data[1].items.length == 5) {
+      alert('Hold up! You already have the maximum number of tasks in progress at the moment. Focus on those first, or move some others to expedite this task.');
+    } else if (newProperties.colID !== undefined && newProperties.pos !== undefined) {
       const targetCol = data.find(column => column.id == newProperties.colID);
 
       if (!targetCol) {

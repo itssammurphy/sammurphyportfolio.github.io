@@ -29,26 +29,27 @@ export default class DropArea {
       const itemId = Number(e.dataTransfer.getData("text/plain"));
       const droppedElement = document.querySelector(`[data-id="${itemId}"]`);
 
-      console.log(droppedElement);
-
-      if (dropArea.parentElement.classList.contains("kanban__item")) {
-        console.log('contains');
+      // console.log(colElement.children[1].children);
+      console.log(colElement);
+      if (colID == 2 && colElement.children[1].children.length-1 >= 5) {
+        //TOO MANY IN PROGRESS ITEMS
+        alert('Hold up! You already have the maximum number of tasks in progress at the moment. Focus on those first, or move some others to expedite this task.');
       } else {
-        console.log('does not contain');
+
+        const insertAfter = dropArea.parentElement.classList.contains("kanban__item") ? dropArea.parentElement : dropArea;
+
+        if (droppedElement.contains(dropArea)) {
+          return;
+        }
+
+        insertAfter.after(droppedElement);
+
+        KanbanAPI.updateItem(itemId, {
+          colID,
+          pos: droppedIndex
+        });
       }
-
-      const insertAfter = dropArea.parentElement.classList.contains("kanban__item") ? dropArea.parentElement : dropArea;
-
-      if (droppedElement.contains(dropArea)) {
-        return;
-      }
-
-      insertAfter.after(droppedElement);
-
-      KanbanAPI.updateItem(itemId, {
-        colID,
-        pos: droppedIndex
-      });
+      document.querySelector('[data-id="2"]').children[0].textContent = 'In Progress (' + (document.querySelector('[data-id="2"]').children[1].children.length-1) + '/5)';
     });
 
     return dropArea;
