@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  font-family: 'Gowun Dodum', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  padding: 35px;
+
+  background: #FFC75F;
+  color: #C1554D;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  transition: 350ms ease-in-out;
+  margin: 10px 0;
+  font-size: 1.5rem;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+input:focus{
+  background: rgba(255, 255, 255, 0.15);
+}
+.pomodoro {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pomodoro__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 10%;
+  margin: 40px 0;
+  width: 60%;
+}
+button {
+  margin: 5px;
+  padding: 0.5rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.76rem;
+  transition: 300ms ease-in-out;
+}
+label {
+  font-size: 1.5rem;
+}
+form {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  max-width: 50%;
+  margin: 5px auto;
+}
+form button {
+  background: #C1554D;
+  color: #fff;
+  font-weight: 600;
+  width: 100%;
+  margin: 5px 0;
+}
+.pomodoro__buttons-start {
+  background: #9AD124;
+  color: #fff;
+  flex-basis: 33.333%;
+}
+.pomodoro__buttons-reset {
+  background: #00D1FF;
+  color: #fff;
+  flex-basis: 33.333%;
+}
+.pomodoro__buttons-pause {
+  background: #E17BFA;
+  color: #fff;
+  flex-basis: 33.333%;
+}
+.pomodro__buttons-break {
+  background: #59ace3;
+  color: #000;
+}
+.pomodoro__buttons-resume {
+  background: #b13acf;
+  color: #fff;
+}
+.pomodoro__clock {
+  padding: 3px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  height: 50%;
+  font-size: 2rem;
+}
+.pomodoro__clock div {
+  font-size: 5rem;
+}
+.pomodoro__progress {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pomodoro__progress-circle {
+  transition: 0.5s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke: #C1554D;
+}
+.nearly-complete {
+  stroke: #ed6f26;
+  animation: pulse 0.9s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: rotate(-90deg) scale(1);
+  }
+  50% {
+    transform: rotate(-90deg) scale(1.05);
+  }
+  75% {
+    transition: rotate(-90deg) scale(0.8);
+  }
+}
+@keyframes pulseMobile {
+  0% {
+    stroke: #ed6f26;
+  }
+  50% {
+    stroke: #C1554D;
+  }
+}

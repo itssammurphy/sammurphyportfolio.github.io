@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro Timer by Sam Murphy</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+  </head>
+  <body>
+    <div class="pomodoro">
+      <figure class="pomodoro__clock">
+        <div class="pomodoro__clock-mins">0</div>
+        <div>:</div>
+        <div class="pomodoro__clock-secs">00</div>
+        <audio src="assets/audio/marimba.mp3"></audio>
+        <svg class="pomodoro__progress" height="350" width="350">
+          <circle class="pomodoro__progress-circle" stroke-width="10" fill="transparent" r="150" cx="175" cy="175"/>
+        </svg>
+      </figure>
+
+      <div class="pomodoro__buttons">
+        <button class="pomodoro__buttons-start">Start Focus Period</button>
+        <button class="pomodoro__buttons-reset">Reset Timer</button>
+        <button class="pomodoro__buttons-pause">Pause Timer</button>
+      </div>
+
+      <form action=".">
+        <label for="focus-time">Focus Duration (Minutes):</label>
+        <input type="number" value="25" id="focus-time" />
+        <label for="break-time">Break Duration (Minutes):</label>
+        <input type="number" value="5" id="break-time" />
+        <button type="submit">Save Settings</button>
+      </form>
+    </div>
+
+    <script src="assets/js/settings-handler.js"></script>
+    <script src="assets/js/timer.js"></script>
+    <script src="assets/js/progress.js"></script>
+  </body>
+</html>

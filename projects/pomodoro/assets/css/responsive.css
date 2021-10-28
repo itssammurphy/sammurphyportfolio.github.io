@@ -1,0 +1,30 @@
+@media screen and (max-width: 900px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .pomodoro {
+    height: auto;
+    width: 90%;
+  }
+  .pomodoro__buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+  .pomodoro__clock {
+    margin-bottom: 100px;
+  }
+  button {
+    width: 100%;
+  }
+  form {
+    max-width: 80%;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    align-items: center;
+  }
+  .nearly-complete {
+    animation: pulseMobile 0.9s ease-in-out infinite;
+  }
+}
