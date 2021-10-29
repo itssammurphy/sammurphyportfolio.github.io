@@ -5,7 +5,7 @@ const pauseBtn = document.querySelector(".pomodoro__buttons-pause");
 focusTimeInputField.value = localStorage.getItem("focus-time");
 breakTimeInputField.value = localStorage.getItem("break-time");
 
-document.querySelector("form").addEventListener("submit", (e) => {
+document.querySelector("form").addEventListener("input", (e) => {
   e.preventDefault();
   localStorage.setItem("focus-time", focusTimeInputField.value);
   localStorage.setItem("break-time", breakTimeInputField.value);
