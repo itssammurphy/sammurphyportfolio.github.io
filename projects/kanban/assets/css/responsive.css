@@ -1,0 +1,36 @@
+@media screen and (max-width: 1000px) {
+  body {
+    justify-content: flex-start;
+  }
+  .window_heading h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .window_heading h2 {
+    font-size: 1.4rem;
+    text-shadow: 2px 2px #000;
+  }
+  .window_heading p {
+    font-size: 1.1rem;
+  }
+  .kanban {
+    margin-top: 2rem;
+    height: auto;
+    width: 75%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .kanban__column-title {
+    font-size: 1.8rem;
+  }
+  .kanban__column:not(:last-child) {
+    margin: 0;
+    margin-bottom: 2.5rem;
+  }
+  .kanban__column {
+    width: 80%;
+    flex: 1;
+    justify-content: flex-start;
+  }
+}
