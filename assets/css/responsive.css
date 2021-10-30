@@ -121,15 +121,20 @@
     font-size: 1rem;
   }
 
-  .portfolio-section .portfolio-grid .tile {
-    flex-basis: 100%;
-    max-width: 98%;
+  .portfolio-section .project-grid {
+    flex-direction: column;
   }
-  .portfolio-section .portfolio-grid .tile .tile-content h1 {
-    font-size: 1.8rem;
+  .project-grid .project-item {
+    max-width: 100%;
   }
-  .portfolio-section .portfolio-grid .tile .tile-content p {
-    font-size: 0.8rem;
+  .project-grid .project-item .project-content h1 {
+    font-size: 1.75rem;
+  }
+  .project-grid .project-item .project-content p {
+    font-size: 1rem;
+  }
+  .project-grid .project-item .project-content a {
+    font-size: 1.45rem;
   }
 
   .contact-section .large-heading {
