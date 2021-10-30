@@ -9,6 +9,8 @@
 
   --section-even-color: #2b2b2b;
 
+  --project-tile-bg: #2b2b2bbf;
+
   --prog1-color: #c0392b;
   --prog2-color: #9b59b6;
   --prog3-color: #ffa500;
@@ -370,7 +372,7 @@ section:not(.home-section) h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--project-tile-bg);
   opacity: 0;
   transition: opacity 300ms ease;
 }
@@ -385,7 +387,7 @@ section:not(.home-section) h1 {
 .project-grid .project-item .project-content h1,
 .project-grid .project-item .project-content a,
 .project-grid .project-item .project-content p {
-  color: #fff;
+  color: var(--text-color);
 }
 .project-grid .project-item .project-content p {
   font-size: 1.3rem;

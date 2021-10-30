@@ -20,6 +20,7 @@ function darkMode() {
   document.documentElement.style.setProperty('--tile-bg', '#383838');
   document.documentElement.style.setProperty('--tile-shadow', '#333333');
   document.documentElement.style.setProperty('--tile-icon-shadow', '#525252');
+  document.documentElement.style.setProperty('--project-tile-bg', '#2b2b2bbf');
 }
 function lightMode() {
   document.documentElement.style.setProperty('--background-color', '#fff');
@@ -31,4 +32,5 @@ function lightMode() {
   document.documentElement.style.setProperty('--tile-bg', '#d7d7d7');
   document.documentElement.style.setProperty('--tile-shadow', '#b9b9b9');
   document.documentElement.style.setProperty('--tile-icon-shadow', '#7d7d7d');
+  document.documentElement.style.setProperty('--project-tile-bg', '#f2f2f2bf');
 }
