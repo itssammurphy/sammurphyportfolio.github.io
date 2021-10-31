@@ -128,13 +128,13 @@
     max-width: 100%;
   }
   .project-grid .project-item .project-content h1 {
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
   }
   .project-grid .project-item .project-content p {
-    font-size: 0.87rem;
+    font-size: 0.87rem !important;
   }
   .project-grid .project-item .project-content a {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
   }
 
   .contact-section .large-heading {
