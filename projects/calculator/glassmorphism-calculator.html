@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Glassmorphism Calculator by Sam Murphy</title>
+  </head>
+  <body>
+    <div class="calc__box">
+      <h1>Glassmorphism Calculator by Sam Murphy</h1>
+      <div class="sqr" style="--i: 0;"></div>
+      <div class="sqr" style="--i: 1;"></div>
+      <div class="sqr" style="--i: 2;"></div>
+      <div class="sqr" style="--i: 3;"></div>
+      <div class="sqr" style="--i: 4;"></div>
+      <div class="sqr" style="--i: 5;"></div>
+
+      <div class="container" data-tilt data-tilt-full-page-listening data-tilt-axis="x">
+        <form class="calculator" name="calculator">
+          <input type="text" readonly class="value" name="screentxt"/>
+          <span class="number clr" onclick="clearCalculator()">C</span>
+          <span class="number" onclick="division()">/</span>
+          <span class="number" onclick="multiply()">x</span>
+          <span class="number" onclick="number(7)">7</span>
+          <span class="number" onclick="number(8)">8</span>
+          <span class="number" onclick="number(9)">9</span>
+          <span class="number" onclick="subtract()">-</span>
+          <span class="number" onclick="number(4)">4</span>
+          <span class="number" onclick="number(5)">5</span>
+          <span class="number" onclick="number(6)">6</span>
+          <span class="number plus" onclick="add()">+</span>
+          <span class="number" onclick="number(1)">1</span>
+          <span class="number" onclick="number(2)">2</span>
+          <span class="number" onclick="number(3)">3</span>
+          <span class="number" onclick="number(0)">0</span>
+          <span class="number" onclick="number('00')">00</span>
+          <span class="number" onclick="decimal()">.</span>
+          <span class="number" onclick="evaluateCalculation()">=</span>
+        </form>
+      </div>
+    </div>
+
+    <script src="assets/js/calculator.js"></script>
+  </body>
+</html>
