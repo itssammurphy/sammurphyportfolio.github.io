@@ -17,74 +17,16 @@ body {
 }
 .calc__box {
   position: relative;
+  width: 550px;
 }
 .calc__box h1 {
-  max-width: 350px;
+  max-width: 100%;
   text-align: center;
   margin-bottom: 1rem;
-  font-size: 1.4rem;
-}
-.calc__box .sqr {
-  position: absolute;
-  background: rgba(255, 255, 255, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  box-shadow: 0 25px 40px solid rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  -webkit-animation: square-move 10s ease infinite;
-          animation: square-move 10s ease infinite;
-  -webkit-animation-delay: calc(-1s * var(--i));
-          animation-delay: calc(-1s * var(--i));
-}
-.calc__box .sqr:nth-child(1) {
-  width: 100px;
-  height: 100px;
-  top: -15px;
-  right: -45px;
-}
-.calc__box .sqr:nth-child(1) {
-  width: 100px;
-  height: 100px;
-  top: -15px;
-  right: -45px;
-}
-.calc__box .sqr:nth-child(2) {
-  width: 150px;
-  height: 150px;
-  top: 105px;
-  left: -125px;
-  z-index: 2;
-}
-.calc__box .sqr:nth-child(3) {
-  width: 60px;
-  height: 60px;
-  bottom: 85px;
-  right: -45px;
-  z-index: 2;
-}
-.calc__box .sqr:nth-child(4) {
-  width: 50px;
-  height: 50px;
-  bottom: 35px;
-  left: -95px;
-}
-.calc__box .sqr:nth-child(5) {
-  width: 50px;
-  height: 50px;
-  top: -15px;
-  left: -25px;
-}
-.calc__box .sqr:nth-child(6) {
-  width: 85px;
-  height: 85px;
-  top: 165px;
-  right: -155px;
-  z-index: 2;
+  font-size: 3rem;
 }
 
 .container {
-  position: relative;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   overflow: hidden;
@@ -93,15 +35,22 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 .container .calculator {
   position: relative;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.container .calculator .buttons {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
 }
 .container .calculator .value {
-  grid-column: span 4;
   height: 120px;
-  width: 300px;
+  width: 100%;
   text-align: right;
   border: none;
   outline: none;
@@ -113,8 +62,8 @@ body {
   border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 .container .calculator span {
-  display: grid;
-  justify-items: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
   height: 75px;
   width: 75px;
@@ -129,6 +78,9 @@ body {
           border-bottom: 1px solid rgba(255, 255, 255, 0.05);
           border-right: 1px solid rgba(255, 255, 255, 0.05);
           transition: 0.5s ease;
+  width: 25%;
+  min-height: 25%;
+  flex-basis: 25%;
 }
 .container .calculator span:hover {
   transition: 0s;
@@ -141,13 +93,19 @@ body {
   font-weight: 500;
 }
 .container .calculator .clr {
-  grid-column: span 2;
-  width: 150px;
+  width: 50%;
+  flex-basis: 50%;
   background: rgba(255, 255, 255, 0.05);
 }
-.container .calculator .plus {
-  grid-row: span 2;
-  height: 150px;
+.container .calculator .row1 {
+  width: 25%;
+  flex-basis: 25%:
+}
+.container .calculator .disable {
+  background: rgba(115, 115, 115, 0.6);
+}
+.container .calculator .disable:hover {
+  background: rgba(115, 115, 115, 0.6);
 }
 .container .calculator .equal {
   background: rgba(255, 255, 255, 0.05);
@@ -174,8 +132,10 @@ body {
   }
 }
 @media screen and (max-width: 800px) {
-  body::before {
-    max-width: 75vw;
-    max-height: 75vw;
+  .calc__box {
+    width: 95vw;
+  }
+  .calc__box h1 {
+    font-size: 2rem;
   }
 }
