@@ -203,14 +203,18 @@ section .content {
 .columns {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
 }
 .columns .left,
 .columns .right {
   flex-basis: 50%;
   max-width: 48%;
+  display: flex;
+  flex-direction: column;
 }
-.left p {
+.left p,
+.right p {
   font-size: 1.5rem;
   text-align: justify;
 }
@@ -218,6 +222,9 @@ section .content {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.right h3 {
+  text-decoration: underline;
 }
 .right img {
   width: 80%;

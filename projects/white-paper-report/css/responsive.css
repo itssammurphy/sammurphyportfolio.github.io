@@ -34,6 +34,8 @@
     width: 250px;
     left: -250px;
     padding: 50px;
+    width: 80%;
+    left: -80%;
   }
   .menu a {
     font-size: 1.2rem;
@@ -65,7 +67,8 @@
   .columns .right {
     max-width: 100%;
   }
-  .left p {
+  .left p,
+  .right p {
     font-size: 1.1rem;
   }
   .right img {
@@ -114,7 +117,8 @@
   .menu a {
     font-size: 1.6rem;
   }
-  .left p {
+  .left p,
+  .right p {
     font-size: 1.2rem;
   }
   .right img {
