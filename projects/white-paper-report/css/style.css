@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300;400;500;600;700&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(189deg, rgba(255,53,53,1) 0%, rgba(233,73,170,1) 34%, rgba(255,53,53,1) 100%);
+  font-family: 'Mohave', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+}
+h1 {
+  color: #fff;
+  font-size: 8rem;
+}
+.smallerh1 {
+  font-size: 5.5rem;
+}
+h2 {
+  font-size: 3.5rem;
+}
+h3 {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+p {
+  font-size: 1.6rem;
+  text-align: justify;
+}
+section a {
+  font-size: 1.4rem;
+  color: #fff;
+}
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section .content {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sources-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.sources-list a {
+  flex-basis: 50%;
+  max-width: 45%;
+  text-align: justify;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+}
+.menu__toggle {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  z-index: 100;
+  height: 30px;
+  width: 30px;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.menu__toggle span,
+.menu__toggle span::before,
+.menu__toggle span::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 4px;
+  background: #fafafa;
+  border-radius: 20px;
+  transition: 450ms cubic-bezier(0.75, 0, 0.3, 1);
+}
+.menu__toggle span::before {
+  top: -10px;
+}
+.menu__toggle span::after {
+  top: 10px;
+}
+.menu__toggle.active > span {
+  background: transparent;
+}
+.menu__toggle.active > span::before,
+.menu__toggle.active > span::after {
+  background: #000;
+  top: 0px;
+}
+.menu__toggle.active > span::before {
+  transform: rotate(-225deg);
+}
+.menu__toggle.active > span::after {
+  transform: rotate(225deg);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -40%;
+  z-index: 99;
+  color: #000;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  width: 40%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms left cubic-bezier(0.77, 0, 0.2, 1);
+}
+
+.menu.active {
+  left: 0;
+}
+.menu a {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #000;
+}
+.menu a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  transition: width 300ms ease, left 300ms ease;
+  width: 0;
+}
+.menu a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  max-width: 100vw;
+}
+.circles {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.circles .circle {
+  background: rgba(255, 255, 255, 1);
+  max-width: 350px;
+  height: 350px;
+  flex-basis: 33.33%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+.circle h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.circle p {
+  max-width: 80%;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.columns .left,
+.columns .right {
+  flex-basis: 50%;
+  max-width: 48%;
+}
+.left p {
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right img {
+  width: 80%;
+}

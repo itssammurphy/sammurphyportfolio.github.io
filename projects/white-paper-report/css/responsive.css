@@ -1,0 +1,122 @@
+@media only screen and (max-width: 860px) {
+  body {
+    overflow: scroll;
+  }
+  section {
+    margin-bottom: 5rem;
+  }
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .smallerh1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-decoration: underline;
+  }
+  p {
+    font-size: 1.1rem;
+  }
+  section#home {
+    margin-top: 5vh;
+  }
+  section .content {
+    width: 95%;
+  }
+  .menu {
+    width: 250px;
+    left: -250px;
+    padding: 50px;
+  }
+  .menu a {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .circles {
+    flex-direction: column;
+  }
+  .circles .circle {
+    width: 80%;
+    aspect-ratio: 1;
+    margin-bottom: 2rem;
+  }
+  .circle h3 {
+    text-align: center;
+  }
+  .circle p {
+    font-size: 1.1rem;
+  }
+
+  .columns {
+    flex-direction: column;
+  }
+  .left {
+    margin-bottom: 1.5rem;
+  }
+  .columns .left,
+  .columns .right {
+    max-width: 100%;
+  }
+  .left p {
+    font-size: 1.1rem;
+  }
+  .right img {
+    width: 95%;
+  }
+
+  .sources-list {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 95vw;
+  }
+  .sources-list a {
+    flex-basis: auto;
+    max-width: 100%;
+    text-align: justify;
+    word-wrap: break-word;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  section {
+    min-height: 100vh;
+  }
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+  }
+  .smallerh1 {
+    font-size: 4.5rem;
+  }
+  h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-decoration: underline;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  .menu a {
+    font-size: 1.6rem;
+  }
+  .left p {
+    font-size: 1.2rem;
+  }
+  .right img {
+    width: 90%;
+  }
+}
