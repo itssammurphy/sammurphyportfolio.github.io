@@ -64,9 +64,9 @@ section .content {
 .sources-list a {
   flex-basis: 50%;
   max-width: 45%;
-  text-align: justify;
   margin-bottom: 1rem;
   word-wrap: break-word;
+  font-size: 1.2rem;
 }
 .menu__toggle {
   position: fixed;
