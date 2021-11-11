@@ -223,8 +223,10 @@ section .content {
   justify-content: center;
   align-items: center;
 }
-.right h3 {
+.right h3,
+.left h3 {
   text-decoration: underline;
+  text-align: center;
 }
 .right img {
   width: 80%;
