@@ -30,6 +30,9 @@
   section .content {
     width: 95%;
   }
+  .menu__toggle {
+    animation: none;
+  }
   .menu {
     width: 250px;
     left: -250px;

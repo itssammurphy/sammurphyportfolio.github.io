@@ -79,6 +79,7 @@ section .content {
   cursor: pointer;
   display: flex;
   align-items: center;
+  animation: bob 3000ms ease-in-out infinite;
 }
 .menu__toggle span,
 .menu__toggle span::before,
@@ -230,4 +231,12 @@ section .content {
 }
 .right img {
   width: 80%;
+}
+@keyframes bob {
+  0% 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
 }
