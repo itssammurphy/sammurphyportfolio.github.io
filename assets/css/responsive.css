@@ -244,6 +244,17 @@
     max-width: 58%;
   }
 }
+@media (max-height: 900px) {
+  .project-grid .project-item .project-content h1 {
+    font-size: 1.5rem !important;
+  }
+  .project-grid .project-item .project-content p {
+    font-size: 0.87rem !important;
+  }
+  .project-grid .project-item .project-content a {
+    font-size: 1.2rem !important;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
