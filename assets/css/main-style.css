@@ -110,7 +110,7 @@ section:not(.home-section) {
 /* HOME SECTION */
 .home-section {
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: row;
 }
