@@ -152,6 +152,12 @@
     margin-bottom: 4rem;
   }
 
+  form input[type="submit"] {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   /* LIGHT SWITCH FOR MOBILE */
   .light-toggle {
     position: fixed;

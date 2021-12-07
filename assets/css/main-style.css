@@ -418,11 +418,27 @@ section:not(.home-section) h1 {
   flex-direction: row;
   justify-content: space-around;
   height: 60%;
+  flex-wrap: wrap;
 }
 .contact-section .contact-content .hiring,
 .contact-section .contact-content .collaborating {
   flex: 0 1 50%;
   max-width: 40%;
+}
+.contact-section .contact-content .form {
+  flex-basis: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-content form textarea {
+  resize: vertical;
+}
+.contact-content form input[type="text"],
+.contact-content form input[type="email"],
+.contact-content form textarea {
+  width: 100%;
 }
 .contact-section .contact-content p {
   font-size: 1.4rem;
@@ -433,8 +449,8 @@ section:not(.home-section) h1 {
   flex-direction: column;
   justify-content: flex-start;
 }
-.contact-section .contact-content .hiring h2,
-.contact-section .contact-content .collaborating h2 {
+.contact-section .contact-content h2,
+.contact-section .contact-content h2 {
   font-size: 2.8rem;
 }
 .contact-section .contact-content .hiring a {
@@ -575,4 +591,84 @@ main section:nth-child(even) {
 body {
   scrollbar-width: thin;
   scrollbar-color: var(--scroll-thumb-bg) var(--scroll-bg);
+}
+/* CONTACT FORM */
+.contact-section .form {
+  margin-top: 2rem;
+}
+form h3,
+form h2 {
+  text-align: center;
+}
+form h3 {
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+form label {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+form input {
+  padding: .2rem .4rem;
+}
+form input[type="submit"] {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--background-color);
+  font-size: 1.2rem;
+  padding: .5rem .5rem;
+  transition: color 500ms ease, background-color 500ms ease;
+}
+form input[type="submit"]:hover {
+  background-color: var(--background-color);
+  color: var(--accent-color);
+}
+form textarea {
+  padding: .3rem .4rem;
+}
+form input,
+form textarea {
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+
+.form-submit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+.form-submit-modal .modal-content {
+  background: white;
+  width: 50%;
+  padding: 3rem 5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-submit-modal .modal-content h1 {
+  flex-basis: 80%;
+  font-size: 2.8rem;
+}
+.form-submit-modal .modal-content h2 {
+  font-size: 1.8rem;
+}
+.form-submit-modal .modal-content p {
+  font-size: 1.3rem;
+}
+.form-submit-modal .modal-content i {
+  flex-basis: 20%;
+  text-align: right;
+  font-size: 2rem;
 }

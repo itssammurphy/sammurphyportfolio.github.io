@@ -51,6 +51,9 @@
     </script>
   </head>
   <body>
+    <script>
+      var submitted = false;
+    </script>
     <nav id="home">
       <h1>Sam Murphy</h1>
       <ul class="nav-container">
@@ -287,6 +290,22 @@
             is via my <a href="discord.html">discord server</a>. This is also a great place to reach
             me if you just want to have a chat or network with other developers.</p>
           </div>
+          <div class="form">
+            <form id="gform" name="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSdKslRcPLZKAT1yQOJFwZluOuK87McWSGqHhR8wv8OPVIrA_w/formResponse?" onsubmit="submitted=true;" target="hidden_iframe">
+              <h2>Reach Out Directly</h2>
+              <h3>Reach me using this nifty little contact form!</h3>
+              <label for="entry.548613900">Name</label><br>
+              <input type="text" name="entry.548613900" id="entry.548613900" class="name-in" required><br>
+
+              <label for="entry.583448329">Email</label><br>
+              <input type="email" name="entry.583448329" id="entry.583448329" class="email-in" required><br>
+
+              <label for="entry.358140450">Message</label><br>
+              <textarea name="entry.358140450" id="entry.358140450" rows="4" cols="50" required></textarea><br>
+
+              <input type="submit" name="" value="Submit">
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -306,9 +325,18 @@
       </label>
     </div>
 
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="if(submitted) {}"></iframe>
+
+    <div class="form-submit-modal">
+      <div class="modal-content">
+        <h1>Cheers</h1><i id="modal-close" class="uil uil-times"></i>
+        <h2>I really appreciate it!</h2>
+        <p>Thanks for shooting us a line. I will get back to you as soon as possible. Have a great day!</p>
+      </div>
+    </div>
+
     <script src="assets/js/skills.js"></script>
     <script src="assets/js/light-dark-toggle.js"></script>
-    <script src="assets/js/portfolio-hovers.js"></script>
 
     <script>
     if (localStorage.getItem("light-dark") == 1) {
@@ -318,6 +346,18 @@
       $('#light-dark-toggle').prop('checked', false);
       lightMode();
     }
+
+    $('#gform').on('submit', (e) => {
+      $('.form-submit-modal').css({'visibility': 'visible'});
+      $('#gform textarea').val('');
+      $('#gform .name-in').val('');
+      $('#gform .email-in').val('');
+      $('html, body').animate({scrollTop: 0}, "ease");
+    });
+
+    $('#modal-close').on('click', (e) => {
+      $('.form-submit-modal').css({'visibility': 'hidden'});
+    });
     </script>
     <script src="assets/js/tile-reveal.js"></script>
   </body>
