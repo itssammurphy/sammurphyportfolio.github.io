@@ -291,6 +291,7 @@
             me if you just want to have a chat or network with other developers.</p>
           </div>
           <div class="form">
+
             <form id="gform" name="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSdKslRcPLZKAT1yQOJFwZluOuK87McWSGqHhR8wv8OPVIrA_w/formResponse?" onsubmit="submitted=true;" target="hidden_iframe">
               <h2>Reach Out Directly</h2>
               <h3>Reach me using this nifty little contact form!</h3>
@@ -348,7 +349,6 @@
     }
 
     $('#gform').on('submit', (e) => {
-      $('.form-submit-modal').css({'visibility': 'visible'});
       $('#gform textarea').val('');
       $('#gform .name-in').val('');
       $('#gform .email-in').val('');
