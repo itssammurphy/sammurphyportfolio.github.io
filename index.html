@@ -349,14 +349,15 @@
     }
 
     $('#gform').on('submit', (e) => {
-      $('#gform textarea').val('');
-      $('#gform .name-in').val('');
-      $('#gform .email-in').val('');
       $('html, body').animate({scrollTop: 0}, "ease");
+      $('.form-submit-modal').css({'visibility': 'visible'});
     });
 
     $('#modal-close').on('click', (e) => {
       $('.form-submit-modal').css({'visibility': 'hidden'});
+      $('#gform textarea').val('');
+      $('#gform .name-in').val('');
+      $('#gform .email-in').val('');
     });
     </script>
     <script src="assets/js/tile-reveal.js"></script>

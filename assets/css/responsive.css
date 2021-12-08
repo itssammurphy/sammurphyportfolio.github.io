@@ -244,6 +244,32 @@
     opacity: 1;
     transform: translate(2.85rem, 0.625rem) rotate(0deg);
   }
+
+  .form-submit-modal .modal-content {
+    background: white;
+    width: 90%;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+  .form-submit-modal .modal-content h1 {
+    flex-basis: 80%;
+    font-size: 2.4rem;
+  }
+  .form-submit-modal .modal-content h2 {
+    font-size: 1.5rem;
+  }
+  .form-submit-modal .modal-content p {
+    font-size: 1.1rem;
+  }
+  .form-submit-modal .modal-content i {
+    flex-basis: 20%;
+    text-align: right;
+    font-size: 2rem;
+  }
 }
 @media (min-width: 570px) and (max-width: 860px) {
   .home-section .feature-img img {
