@@ -1,4 +1,8 @@
 $('#light-dark-toggle').change(() => {
+  toggleDark();
+});
+
+function toggleDark() {
   if ($('#light-dark-toggle').is(':checked')) {
     localStorage.setItem("light-dark", 1);
     //CHECKED = DARK MODE
@@ -8,7 +12,7 @@ $('#light-dark-toggle').change(() => {
     //NOT CHECKED = LIGHT MODE
     lightMode();
   }
-});
+}
 
 function darkMode() {
   document.documentElement.style.setProperty('--background-color', '#202020');

@@ -359,6 +359,14 @@
       $('#gform .email-in').val('');
     });
     </script>
+
+    <script>
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        darkMode();
+      } else {
+        lightMode();
+      }
+    </script>
     <script src="assets/js/tile-reveal.js"></script>
   </body>
 </html>
