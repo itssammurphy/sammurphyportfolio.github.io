@@ -363,8 +363,10 @@
     <script>
       if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         darkMode();
+        $('#light-dark-toggle').prop('checked', true);
       } else {
         lightMode();
+        $('#light-dark-toggle').prop('checked', false);
       }
     </script>
     <script src="assets/js/tile-reveal.js"></script>
