@@ -82,9 +82,10 @@ body {
   min-height: 25%;
   flex-basis: 25%;
 }
-.container .calculator span:hover {
+.container .calculator span:hover,
+.container .calculator span:focus {
   transition: 0s;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
 }
 .container .calculator span:active {
   background: #e3ffbd;
