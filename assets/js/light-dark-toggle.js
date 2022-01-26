@@ -4,11 +4,9 @@ $('#light-dark-toggle').change(() => {
 
 function toggleDark() {
   if ($('#light-dark-toggle').is(':checked')) {
-    localStorage.setItem("light-dark", 1);
     //CHECKED = DARK MODE
     darkMode();
   } else {
-    localStorage.setItem("light-dark", 0);
     //NOT CHECKED = LIGHT MODE
     lightMode();
   }
@@ -25,6 +23,7 @@ function darkMode() {
   document.documentElement.style.setProperty('--tile-shadow', '#333333');
   document.documentElement.style.setProperty('--tile-icon-shadow', '#525252');
   document.documentElement.style.setProperty('--project-tile-bg', '#2b2b2bbf');
+  localStorage.setItem("light-dark", 1);
 }
 function lightMode() {
   document.documentElement.style.setProperty('--background-color', '#fff');
@@ -37,4 +36,5 @@ function lightMode() {
   document.documentElement.style.setProperty('--tile-shadow', '#b9b9b9');
   document.documentElement.style.setProperty('--tile-icon-shadow', '#7d7d7d');
   document.documentElement.style.setProperty('--project-tile-bg', '#f2f2f2bf');
+  localStorage.setItem("light-dark", 0);
 }
