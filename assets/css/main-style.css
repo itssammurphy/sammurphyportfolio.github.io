@@ -438,7 +438,8 @@ section:not(.home-section) h1 {
 .contact-content form textarea {
   resize: vertical;
 }
-.contact-content form input:focus {
+.contact-content form input:focus,
+.contact-content form textarea:focus {
   background: var(--text-color);
   color: var(--background-color);
 }
